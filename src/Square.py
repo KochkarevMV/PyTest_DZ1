@@ -13,4 +13,4 @@ class Square(Figure):
     
     @property
     def get_area(self):
-        return self.square_side_A*self.square_side_A
+        return self.square_side_A * self.square_side_A

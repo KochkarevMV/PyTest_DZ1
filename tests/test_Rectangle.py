@@ -14,13 +14,28 @@ def test_rectangle_area_positive(side_a, side_b, area):
     assert rect_1.get_area == area
 
 
+
 @pytest.mark.parametrize(
-    ('side_a', 'side_b'),
+    ('side_a', 'side_b', 'perimeter'),
     [
-        pytest.param(-4, 3, id="отрицательное значение стороны"),
-        pytest.param(4.4, 0, id="нулевое значение стороны")
+        pytest.param(3, 4, 14, id='perimetr_1 = 14 (int)'),
+        pytest.param(2.5, 6.4, 17.8, id='perimetr_2 = 17.8 (int)')
     ],
 )
-def test_rectangle_negative_values(side_a, side_b):
+def test_rectangle_perimeter_positive(side_a, side_b, perimeter):
+    rect_2 = Rectangle(side_a, side_b)
+    assert rect_2.get_perimeter == perimeter
+
+
+
+@pytest.mark.parametrize(
+    ('side_a', 'side_b', 'area'),
+    [
+        pytest.param(-4, -3, -28, id="отрицательное значение стороны"),
+        pytest.param(0, 0, 0, id="нулевое значение стороны")
+    ],
+)
+def test_rectangle_negative_values(side_a, side_b, area):
+    Rect_2 = Rectangle(side_a,side_b)
     with pytest.raises(ValueError):
         Rectangle(side_a, side_b)

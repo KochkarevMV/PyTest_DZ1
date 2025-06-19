@@ -13,13 +13,13 @@ class Triangle(Figure):
         self.tri_A = tri_A
         self.tri_B = tri_B
         self.tri_C = tri_C
-        
+
     @property
     def get_perimeter(self):
         return self.tri_A + self.tri_B + self.tri_C
 
     @property
     def get_area(self):
-        tri_P = (self.tri_A + self.tri_B + self.tri_C)/2
-        tri_S = math.trunc(math.sqrt(tri_P*(tri_P-self.tri_A)*(tri_P-self.tri_B)*(tri_P-self.tri_C)))
-        return tri_S
+        tri_p = (self.tri_A + self.tri_B + self.tri_C)/2
+        tri_s = math.trunc(math.sqrt(tri_p*(tri_p-self.tri_A)*(tri_p-self.tri_B)*(tri_p-self.tri_C)))
+        return tri_s
