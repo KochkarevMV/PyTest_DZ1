@@ -9,7 +9,7 @@ import pytest
         pytest.param(5, 78, id='area1 = 78 (int)'),
     ],
 )
-def test_circle_area_positive(radius, area):
+def test_circle_area_positive(radius, area, enter_exit_points):
     circle_1 = Circle(radius)
     assert circle_1.get_area == area
 

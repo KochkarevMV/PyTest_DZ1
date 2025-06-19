@@ -9,7 +9,7 @@ import pytest
         pytest.param(3.5, 5.5, 19.25, id='area 2 = 19.25 (float)'),
     ],
 )
-def test_rectangle_area_positive(side_a, side_b, area):
+def test_rectangle_area_positive(side_a, side_b, area, enter_exit_points):
     rect_1 = Rectangle(side_a, side_b)
     assert rect_1.get_area == area
 

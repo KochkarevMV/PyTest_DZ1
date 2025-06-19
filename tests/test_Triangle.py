@@ -9,7 +9,7 @@ import pytest
         pytest.param(3, 5, 7, 6, id='площадь треугольника_1 = 6 (int)'),
     ],
 )
-def test_triangle_area_positive(side_a, side_b, side_c, area):
+def test_triangle_area_positive(side_a, side_b, side_c, area, enter_exit_points):
     tri_1 = Triangle(side_a, side_b, side_c)
     assert tri_1.get_area == area
 

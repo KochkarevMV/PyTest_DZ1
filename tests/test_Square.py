@@ -10,7 +10,7 @@ import pytest
         pytest.param(3.4, 11.559999999999999, id='area2 = 11.56 (float)')
     ],
 )
-def test_square_area_positive(side_a, area):
+def test_square_area_positive(side_a, area, enter_exit_points):
     square_1 = Square(side_a)
     assert square_1.get_area == area
 
